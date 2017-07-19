@@ -1,0 +1,6 @@
+framework module Pods_makestagram {
+  umbrella header "Pods-makestagram-umbrella.h"
+
+  export *
+  module * { export * }
+}
