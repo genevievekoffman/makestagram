@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		334AF9A4261A501DDC0E3004 /* Pods_makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8AE850608FB6E0E2A0F328 /* Pods_makestagram.framework */; };
+		AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A051F1FE55C0044101A /* LoginViewController.swift */; };
+		AF649A0A1F20F5A90044101A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A091F20F5A90044101A /* User.swift */; };
+		AF649A0C1F2102820044101A /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A0B1F2102820044101A /* CreateUsernameViewController.swift */; };
 		AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F130C1F1F953200328E25 /* AppDelegate.swift */; };
 		AF6F13141F1F953200328E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13131F1F953200328E25 /* Assets.xcassets */; };
 		AF6F132C1F1FA91A00328E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F132A1F1FA91A00328E25 /* Main.storyboard */; };
@@ -16,11 +19,13 @@
 		AF6F13371F1FAA9E00328E25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13361F1FAA9E00328E25 /* GoogleService-Info.plist */; };
 		AF6F133B1F1FB20400328E25 /* Supporting in Resources */ = {isa = PBXBuildFile; fileRef = AF6F133A1F1FB20400328E25 /* Supporting */; };
 		AF6F13421F1FB6BA00328E25 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13411F1FB6BA00328E25 /* Login.storyboard */; };
-		AF6F13441F1FB85400328E25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F13431F1FB85400328E25 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7449C330010F2276FA5AAF10 /* Pods-makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-makestagram/Pods-makestagram.release.xcconfig"; sourceTree = "<group>"; };
+		AF649A051F1FE55C0044101A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		AF649A091F20F5A90044101A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		AF649A0B1F2102820044101A /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateUsernameViewController.swift; path = Controllers/CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		AF6F13091F1F953200328E25 /* makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F130C1F1F953200328E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6F13131F1F953200328E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,7 +35,6 @@
 		AF6F13361F1FAA9E00328E25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF6F133A1F1FB20400328E25 /* Supporting */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Supporting; sourceTree = "<group>"; };
 		AF6F13411F1FB6BA00328E25 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
-		AF6F13431F1FB85400328E25 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		DC8AE850608FB6E0E2A0F328 /* Pods_makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4CE05FE29FA4D5137EDA95 /* Pods-makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-makestagram/Pods-makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF649A081F20F5910044101A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF649A091F20F5A90044101A /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		AF6F13001F1F953200328E25 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6F130C1F1F953200328E25 /* AppDelegate.swift */,
+				AF649A081F20F5910044101A /* Models */,
 				AF6F133C1F1FB2EE00328E25 /* view controllers */,
 				AF6F133E1F1FB34D00328E25 /* supporting files */,
 				AF6F133D1F1FB30A00328E25 /* storyboards */,
@@ -98,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				AF6F132F1F1FAA5700328E25 /* ViewController.swift */,
-				AF6F13431F1FB85400328E25 /* LoginViewController.swift */,
+				AF649A051F1FE55C0044101A /* LoginViewController.swift */,
+				AF649A0B1F2102820044101A /* CreateUsernameViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -249,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6F13441F1FB85400328E25 /* LoginViewController.swift in Sources */,
+				AF649A0A1F20F5A90044101A /* User.swift in Sources */,
+				AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */,
 				AF6F13301F1FAA5700328E25 /* ViewController.swift in Sources */,
+				AF649A0C1F2102820044101A /* CreateUsernameViewController.swift in Sources */,
 				AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
