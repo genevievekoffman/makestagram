@@ -131,6 +131,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="u8i-Xl-tlX" eventType="touchUpInside" id="OQd-4v-BLC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -150,6 +153,10 @@
                             <constraint firstItem="PCV-j2-m0G" firstAttribute="top" secondItem="b6O-Wl-k5Z" secondAttribute="top" constant="45" id="b6F-Gh-EZU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="VOK-Wb-kDu" id="7MP-dB-a2B"/>
+                        <outlet property="usernameTextField" destination="spG-7J-glD" id="rX4-J1-H87"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cm-Vp-UdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
