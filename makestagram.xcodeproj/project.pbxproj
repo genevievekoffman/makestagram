@@ -11,6 +11,7 @@
 		AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A051F1FE55C0044101A /* LoginViewController.swift */; };
 		AF649A0A1F20F5A90044101A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A091F20F5A90044101A /* User.swift */; };
 		AF649A0E1F2106360044101A /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A0D1F2106360044101A /* CreateUsernameViewController.swift */; };
+		AF649A101F21274B0044101A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A0F1F21274A0044101A /* UserService.swift */; };
 		AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F130C1F1F953200328E25 /* AppDelegate.swift */; };
 		AF6F13141F1F953200328E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13131F1F953200328E25 /* Assets.xcassets */; };
 		AF6F132C1F1FA91A00328E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F132A1F1FA91A00328E25 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		AF649A051F1FE55C0044101A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		AF649A091F20F5A90044101A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		AF649A0D1F2106360044101A /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateUsernameViewController.swift; path = Controllers/CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		AF649A0F1F21274A0044101A /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = makestagram/Services/UserService.swift; sourceTree = "<group>"; };
 		AF6F13091F1F953200328E25 /* makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F130C1F1F953200328E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6F13131F1F953200328E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		AF649A111F2127510044101A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF649A0F1F21274A0044101A /* UserService.swift */,
+			);
+			name = Services;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		AF6F13001F1F953200328E25 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6F130C1F1F953200328E25 /* AppDelegate.swift */,
+				AF649A111F2127510044101A /* Services */,
 				AF649A081F20F5910044101A /* Models */,
 				AF6F133C1F1FB2EE00328E25 /* view controllers */,
 				AF6F133E1F1FB34D00328E25 /* supporting files */,
@@ -265,6 +277,7 @@
 			files = (
 				AF649A0A1F20F5A90044101A /* User.swift in Sources */,
 				AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */,
+				AF649A101F21274B0044101A /* UserService.swift in Sources */,
 				AF6F13301F1FAA5700328E25 /* ViewController.swift in Sources */,
 				AF649A0E1F2106360044101A /* CreateUsernameViewController.swift in Sources */,
 				AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */,
