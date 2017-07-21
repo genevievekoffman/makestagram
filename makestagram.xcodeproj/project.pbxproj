@@ -17,6 +17,7 @@
 		AF649A191F21458B0044101A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF649A171F21458B0044101A /* Main.storyboard */; };
 		AF649A1B1F2163EA0044101A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A1A1F2163EA0044101A /* HomeViewController.swift */; };
 		AF649A1D1F2164090044101A /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A1C1F2164090044101A /* FindFriendsViewController.swift */; };
+		AF649A1F1F22529B0044101A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A1E1F22529B0044101A /* MainTabBarController.swift */; };
 		AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F130C1F1F953200328E25 /* AppDelegate.swift */; };
 		AF6F13141F1F953200328E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13131F1F953200328E25 /* Assets.xcassets */; };
 		AF6F13331F1FAA7200328E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13311F1FAA7200328E25 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		AF649A181F21458B0044101A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF649A1A1F2163EA0044101A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF649A1C1F2164090044101A /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
+		AF649A1E1F22529B0044101A /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
 		AF6F13091F1F953200328E25 /* makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F130C1F1F953200328E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6F13131F1F953200328E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AF649A051F1FE55C0044101A /* LoginViewController.swift */,
 				AF649A0D1F2106360044101A /* CreateUsernameViewController.swift */,
 				AF649A1A1F2163EA0044101A /* HomeViewController.swift */,
+				AF649A1E1F22529B0044101A /* MainTabBarController.swift */,
 				AF649A1C1F2164090044101A /* FindFriendsViewController.swift */,
 			);
 			name = "view controllers";
@@ -294,6 +297,7 @@
 			files = (
 				AF649A0A1F20F5A90044101A /* User.swift in Sources */,
 				AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */,
+				AF649A1F1F22529B0044101A /* MainTabBarController.swift in Sources */,
 				AF649A101F21274B0044101A /* UserService.swift in Sources */,
 				AF649A1B1F2163EA0044101A /* HomeViewController.swift in Sources */,
 				AF649A151F213DB50044101A /* Storyboard+Utility.swift in Sources */,
