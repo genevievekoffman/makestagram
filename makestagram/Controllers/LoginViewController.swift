@@ -15,15 +15,14 @@ typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
+    
     @IBAction func clickLogin(_ sender: UIButton) {
         
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
-        // 2
         authUI.delegate = self as? FUIAuthDelegate
-        
-        // 3
+    
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
@@ -71,7 +70,7 @@ extension LoginViewController: FUIAuthDelegate {
         UserService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
-                User.setCurrent(user)
+                User.setCurrent(user, writeToUserDefaults: true)
                 
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController

@@ -12,20 +12,13 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
-        
-        let initialViewController = UIStoryboard.initialViewController(for: .login)
-            window?.rootViewController = initialViewController
-            window?.makeKeyAndVisible()
-        
+        configureInitialRootViewController(for: window) // allows us to skip login flow if user recently authenticated on the device
         return true
     }
-
 
 //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 //        // Override point for customization after application launch.
@@ -55,7 +48,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+}
 
 
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
 }
 
