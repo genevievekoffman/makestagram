@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="Gei-K1-kvj">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tab_plus_black" id="Gei-K1-kvj">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_find_friends_black" id="1NW-Gi-X2K">
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="tab_find_friends_black" id="1NW-Gi-X2K">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -72,11 +72,11 @@
             </objects>
             <point key="canvasLocation" x="634" y="-227"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="HSm-c1-9XU">
             <objects>
-                <tabBarController id="Mxq-Wx-LHz" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="PS3-0p-Xsv" customClass="MainTabBarController">
+                <tabBarController id="Mxq-Wx-LHz" customClass="MainTabBarController" customModule="makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PS3-0p-Xsv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
