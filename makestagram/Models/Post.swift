@@ -11,6 +11,12 @@ import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
 class Post {
+    var dictValue: [String: Any] {
+        let createdAgo = creationDate.timeIntervalSince1970
+        return ["image_url" : imageURL,     // why arent they recognizing the var from post.swift in models?
+            "image_height" : imageHeight,
+            "created_at" : createdAgo]
+    }
     var key: String?
     let imageURL: String
     let imageHeight: CGFloat
