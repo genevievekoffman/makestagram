@@ -19,6 +19,7 @@
 		AF649A1D1F2164090044101A /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A1C1F2164090044101A /* FindFriendsViewController.swift */; };
 		AF649A1F1F22529B0044101A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A1E1F22529B0044101A /* MainTabBarController.swift */; };
 		AF649A211F2259040044101A /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A201F2259040044101A /* MGPhotoHelper.swift */; };
+		AF649A2A1F22FAF50044101A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A291F22FAF50044101A /* StorageService.swift */; };
 		AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F130C1F1F953200328E25 /* AppDelegate.swift */; };
 		AF6F13141F1F953200328E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13131F1F953200328E25 /* Assets.xcassets */; };
 		AF6F13331F1FAA7200328E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13311F1FAA7200328E25 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		AF649A1C1F2164090044101A /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		AF649A1E1F22529B0044101A /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
 		AF649A201F2259040044101A /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = makestagram/Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		AF649A291F22FAF50044101A /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = makestagram/Services/StorageService.swift; sourceTree = "<group>"; };
 		AF6F13091F1F953200328E25 /* makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F130C1F1F953200328E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6F13131F1F953200328E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		AF649A111F2127510044101A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF649A291F22FAF50044101A /* StorageService.swift */,
 				AF649A0F1F21274A0044101A /* UserService.swift */,
 			);
 			name = Services;
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF649A0A1F20F5A90044101A /* User.swift in Sources */,
+				AF649A2A1F22FAF50044101A /* StorageService.swift in Sources */,
 				AF649A061F1FE55C0044101A /* LoginViewController.swift in Sources */,
 				AF649A1F1F22529B0044101A /* MainTabBarController.swift in Sources */,
 				AF649A101F21274B0044101A /* UserService.swift in Sources */,
