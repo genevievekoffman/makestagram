@@ -24,6 +24,7 @@
 		AF649A301F23AB3C0044101A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A2F1F23AB3C0044101A /* Post.swift */; };
 		AF649A321F23E81B0044101A /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A311F23E81B0044101A /* UIImage+Size.swift */; };
 		AF649A341F23E9740044101A /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF649A331F23E9740044101A /* StorageReference+Post.swift */; };
+		AF649A361F267DC00044101A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF649A351F267DC00044101A /* Home.storyboard */; };
 		AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F130C1F1F953200328E25 /* AppDelegate.swift */; };
 		AF6F13141F1F953200328E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13131F1F953200328E25 /* Assets.xcassets */; };
 		AF6F13331F1FAA7200328E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13311F1FAA7200328E25 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		AF649A2F1F23AB3C0044101A /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		AF649A311F23E81B0044101A /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "Extensions/UIImage+Size.swift"; sourceTree = "<group>"; };
 		AF649A331F23E9740044101A /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		AF649A351F267DC00044101A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 		AF6F13091F1F953200328E25 /* makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F130C1F1F953200328E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6F13131F1F953200328E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				AF649A171F21458B0044101A /* Main.storyboard */,
+				AF649A351F267DC00044101A /* Home.storyboard */,
 				AF6F13411F1FB6BA00328E25 /* Login.storyboard */,
 			);
 			name = storyboards;
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF649A361F267DC00044101A /* Home.storyboard in Resources */,
 				AF6F133B1F1FB20400328E25 /* Supporting in Resources */,
 				AF6F13331F1FAA7200328E25 /* LaunchScreen.storyboard in Resources */,
 				AF6F13421F1FB6BA00328E25 /* Login.storyboard in Resources */,
