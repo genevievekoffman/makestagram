@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="mHN-vk-wji">
             <objects>
-                <viewController id="mkN-eY-cDB" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="mkN-eY-cDB" customClass="HomeViewController" customModule="makestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xdE-aF-lie"/>
                         <viewControllerLayoutGuide type="bottom" id="beU-k0-DRg"/>
@@ -36,7 +36,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="mkN-eY-cDB" id="97G-ac-ttA"/>
-                                    <outlet property="delegate" destination="mkN-eY-cDB" id="889-Ax-m3R"/>
+                                    <outlet property="delegate" destination="mkN-eY-cDB" id="cGZ-8w-gIe"/>
                                 </connections>
                             </tableView>
                         </subviews>

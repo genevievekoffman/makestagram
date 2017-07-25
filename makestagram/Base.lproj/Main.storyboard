@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photo View Controller-->
+        <!--View Controller-->
         <scene sceneID="h4C-k4-WyZ">
             <objects>
-                <viewController id="95f-7d-r0H" customClass="PhotoViewController" sceneMemberID="viewController">
+                <viewController id="95f-7d-r0H" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gKj-g9-5XJ"/>
                         <viewControllerLayoutGuide type="bottom" id="mHJ-pb-ODy"/>
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="634" y="427"/>
         </scene>
-        <!--Find Friends View Controller-->
+        <!--View Controller-->
         <scene sceneID="auq-61-01M">
             <objects>
-                <viewController id="pgk-cT-8w0" customClass="FindFriendsViewController" sceneMemberID="viewController">
+                <viewController id="pgk-cT-8w0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hah-Dh-VLc"/>
                         <viewControllerLayoutGuide type="bottom" id="RqS-jt-fDu"/>

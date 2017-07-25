@@ -34,7 +34,7 @@ struct UserService {
             }
             completion(user)
         })
-    } // ??^^
+    } // use func to find a specific user and return it and all its info.
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs = ["username": username]

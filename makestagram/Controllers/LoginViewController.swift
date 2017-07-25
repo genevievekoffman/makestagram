@@ -14,8 +14,8 @@ import FirebaseDatabase
 typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var loginButton: UIButton!
     @IBAction func clickLogin(_ sender: UIButton) {
         
         guard let authUI = FUIAuth.defaultAuthUI()
