@@ -17,4 +17,4 @@ extension UIImage {
         
         return size.height / aspectRatio
     }
-}
+} //calculate the aspect height for the instance of UIImage based on its size properties ex: "adapts" to ipad sizes

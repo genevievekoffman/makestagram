@@ -18,4 +18,4 @@ extension StorageReference {
         
         return Storage.storage().reference().child("images/posts/\(uid)/\(timestamp).jpg")
     }
-}
+} // creates extension to StorageReference with a class method that will generate a new location for each new post image 

@@ -6,7 +6,6 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 

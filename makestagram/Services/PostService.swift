@@ -23,7 +23,7 @@ struct PostService {
             let aspectHeight = image.aspectHeight
             create(forURLString: urlString, aspectHeight: aspectHeight)
         }
-    } // if an image is clicked, store it and upload it also returns string for URL
+    } // due to created extension StorageReference, stores image and returns string for URL
     
     private static func create(forURLString urlString: String, aspectHeight: CGFloat) {
         
