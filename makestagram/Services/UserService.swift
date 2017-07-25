@@ -23,7 +23,7 @@ struct UserService {
             let posts = snapshot.reversed().flatMap(Post.init)
             completion(posts)
         })
-    }  //^^ recieves posts from users firebase (fetches and returns all posts of a user)
+    }  //^^ recieves all posts from users firebase (fetches and returns all posts)
     
     static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
         let ref = Database.database().reference().child("users").child(uid)
@@ -34,7 +34,7 @@ struct UserService {
             }
             completion(user)
         })
-    } // ^^ recieves users from firebase, sees if a user exits in the database
+    } // ??^^
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs = ["username": username]
@@ -51,5 +51,5 @@ struct UserService {
                 completion(user)
             })
         }
-    } // remove networking-related code (creating a new user)from createUsernameViewController. Place it inside struct. Acts as a link for communicating with our app and firebase. 
+    } // remove networking-related code (creating a new user)from createUsernameViewController. Place it inside struct. Acts as a link for communicating with our app and firebase.
 }

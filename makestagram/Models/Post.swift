@@ -38,5 +38,5 @@ class Post {
         self.imageURL = imageURL
         self.imageHeight = imageHeight
         self.creationDate = Date(timeIntervalSince1970: createdAgo)
-    }
+    } // failable initializer 
 }
