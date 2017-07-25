@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,11 +22,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ZV-Hh-Ihz">
-                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="a7c-qf-Mkc"/>
-                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostImageCell" id="PAt-Br-hMY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAt-Br-hMY" id="Yb1-Yx-sHP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="mkN-eY-cDB" id="97G-ac-ttA"/>
                                     <outlet property="delegate" destination="mkN-eY-cDB" id="889-Ax-m3R"/>
@@ -36,17 +42,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="beU-k0-DRg" firstAttribute="top" secondItem="5ZV-Hh-Ihz" secondAttribute="bottom" id="16i-v4-lv1"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="trailing" secondItem="khN-eS-dQ4" secondAttribute="trailingMargin" id="6SI-qm-8kS"/>
-                            <constraint firstItem="beU-k0-DRg" firstAttribute="top" secondItem="5ZV-Hh-Ihz" secondAttribute="bottom" id="6bq-Hl-z4x"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="top" secondItem="xdE-aF-lie" secondAttribute="bottom" id="A6I-X5-mWv"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="top" secondItem="xdE-aF-lie" secondAttribute="bottom" id="B2C-ht-xvf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5ZV-Hh-Ihz" secondAttribute="trailing" id="Ocp-If-Xiu"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="leading" secondItem="khN-eS-dQ4" secondAttribute="leadingMargin" id="eUT-7O-Pxg"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="leading" secondItem="khN-eS-dQ4" secondAttribute="leadingMargin" id="hI4-xi-oHX"/>
+                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="leading" secondItem="khN-eS-dQ4" secondAttribute="leading" id="Jek-M7-bWS"/>
+                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="top" secondItem="xdE-aF-lie" secondAttribute="bottom" id="WbP-CO-W5n"/>
+                            <constraint firstAttribute="trailing" secondItem="5ZV-Hh-Ihz" secondAttribute="trailing" id="g4W-yI-Kaa"/>
+                            <constraint firstItem="beU-k0-DRg" firstAttribute="top" secondItem="5ZV-Hh-Ihz" secondAttribute="bottom" id="qyX-1p-NKd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HC7-sB-uxc"/>
+                    <connections>
+                        <outlet property="tableView" destination="5ZV-Hh-Ihz" id="L8c-nN-c8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcQ-Y7-QFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

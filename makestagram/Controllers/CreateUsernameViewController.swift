@@ -11,7 +11,6 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class CreateUsernameViewController: UIViewController {
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,8 @@ class CreateUsernameViewController: UIViewController {
             let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
-        }
+        } // check: FIRuser is logged in + provided username. Create dictionary to store username. Identify a path for the location where we store our data, write the data there. Reads user written to database and create a User 
+        //creates new instance of main storyboard, checks that the storyboard has an initial view controller. Gets Reference to the current window and sets rootViewController equal to the initalViewController 
     }
 }
 

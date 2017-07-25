@@ -6,7 +6,6 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import FirebaseStorage
 import FirebaseDatabase
@@ -17,26 +16,21 @@ struct PostService {
         let imageRef = StorageReference.newPostImageReference()
         StorageService.uploadImage(image, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
-                return
+                return //?? return what
             }
             
             let urlString = downloadURL.absoluteString
             let aspectHeight = image.aspectHeight
             create(forURLString: urlString, aspectHeight: aspectHeight)
         }
-    }
+    } // if an image is clicked, store it and upload it also returns string for URL
     
     private static func create(forURLString urlString: String, aspectHeight: CGFloat) {
-        // 1
-        let currentUser = User.current
-        // 2
-        let post = Post(imageURL: urlString, imageHeight: aspectHeight)
-        // 3
-        let dict = post.dictValue
         
-        // 4
+        let currentUser = User.current
+        let post = Post(imageURL: urlString, imageHeight: aspectHeight)
+        let dict = post.dictValue
         let postRef = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
-        //5
         postRef.updateChildValues(dict)
-    }
+    } // ?? private func saves data in a dictionary (privately)
 }

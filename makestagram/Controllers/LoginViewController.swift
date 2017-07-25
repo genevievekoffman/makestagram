@@ -80,5 +80,6 @@ extension LoginViewController: FUIAuthDelegate {
                 self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
         }
-    }
+    } //whenever a user signs up or logs in, the user is stored in UserDefaults. Sets the rootViewController after user is created. 
+    // when a user logs in (due to setting the singleton) there data will remain in memory until app is deleted or logged out 
 }

@@ -70,5 +70,5 @@ extension AppDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }
-}
+} // determines which storyboard initial view controller should be set as rootViewController
 

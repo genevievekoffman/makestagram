@@ -6,7 +6,6 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import FirebaseStorage
 
@@ -14,21 +13,15 @@ struct StorageService {
     // provide method for uploading images
     
     static func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
-        // 1
         guard let imageData = UIImageJPEGRepresentation(image, 0.1) else {
             return completion(nil)
         }
-        
-        // 2
         reference.putData(imageData, metadata: nil, completion: { (metadata, error) in
-            // 3
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return completion(nil)
             }
-            
-            // 4
             completion(metadata?.downloadURL())
         })
-    }
+    } //changes image to data, reduces quality, if the image cannot be converted nil is returned. Upload the image data to the path (parameter) check for error. Nil returned if theres error, if succesful    ** images URL is returned
 }

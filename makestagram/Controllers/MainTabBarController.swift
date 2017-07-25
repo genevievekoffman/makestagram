@@ -6,7 +6,6 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MainTabBarController: UITabBarController {
@@ -22,7 +21,7 @@ class MainTabBarController: UITabBarController {
         delegate = self
         
         tabBar.unselectedItemTintColor = .black
-    }
+    } // calls on itself, takes the image and makes it black 0.0
 }
 
 extension MainTabBarController: UITabBarControllerDelegate {

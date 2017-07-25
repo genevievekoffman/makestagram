@@ -6,4 +6,10 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeViewController: UIViewController  {
+
+    @IBOutlet weak var tableView: UITableView!
+
+}
