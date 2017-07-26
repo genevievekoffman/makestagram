@@ -31,6 +31,7 @@
 		AF6F13371F1FAA9E00328E25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13361F1FAA9E00328E25 /* GoogleService-Info.plist */; };
 		AF6F133B1F1FB20400328E25 /* Supporting in Resources */ = {isa = PBXBuildFile; fileRef = AF6F133A1F1FB20400328E25 /* Supporting */; };
 		AF6F13421F1FB6BA00328E25 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F13411F1FB6BA00328E25 /* Login.storyboard */; };
+		AFC7FC6A1F290E770021B9FB /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7FC691F290E770021B9FB /* PostHeaderCell.swift */; };
 		AFD9A8C91F27DE6E009B3269 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9A8C81F27DE6E009B3269 /* PostImageCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,8 @@
 		AF6F13361F1FAA9E00328E25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF6F133A1F1FB20400328E25 /* Supporting */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Supporting; sourceTree = "<group>"; };
 		AF6F13411F1FB6BA00328E25 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
-		AFD9A8C81F27DE6E009B3269 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = makestagram/Views/PostImageCell.swift; sourceTree = "<group>"; };
+		AFC7FC691F290E770021B9FB /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = Views/PostHeaderCell.swift; sourceTree = "<group>"; };
+		AFD9A8C81F27DE6E009B3269 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
 		DC8AE850608FB6E0E2A0F328 /* Pods_makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4CE05FE29FA4D5137EDA95 /* Pods-makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-makestagram/Pods-makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +137,6 @@
 		AF6F13001F1F953200328E25 = {
 			isa = PBXGroup;
 			children = (
-				AFD9A8C81F27DE6E009B3269 /* PostImageCell.swift */,
 				AF649A221F2259130044101A /* Helpers */,
 				AF6F130B1F1F953200328E25 /* makestagram */,
 				AF6F130A1F1F953200328E25 /* Products */,
@@ -170,6 +171,8 @@
 		AF6F133C1F1FB2EE00328E25 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFD9A8C81F27DE6E009B3269 /* PostImageCell.swift */,
+				AFC7FC691F290E770021B9FB /* PostHeaderCell.swift */,
 				AF649A051F1FE55C0044101A /* LoginViewController.swift */,
 				AF649A0D1F2106360044101A /* CreateUsernameViewController.swift */,
 				AF649A1A1F2163EA0044101A /* HomeViewController.swift */,
@@ -344,6 +347,7 @@
 				AF649A131F213BA60044101A /* Constants.swift in Sources */,
 				AF649A2C1F22FD920044101A /* PostService.swift in Sources */,
 				AF649A0E1F2106360044101A /* CreateUsernameViewController.swift in Sources */,
+				AFC7FC6A1F290E770021B9FB /* PostHeaderCell.swift in Sources */,
 				AF6F130D1F1F953200328E25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

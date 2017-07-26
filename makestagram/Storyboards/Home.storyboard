@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +26,46 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeaderCell" rowHeight="54" id="pfL-Fg-Un6" customClass="PostHeaderCell" customModule="makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfL-Fg-Un6" id="sAv-bN-bHG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dt-dRM">
+                                                    <rect key="frame" x="23" y="0.0" width="76" height="45.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-ra-roY">
+                                                    <rect key="frame" x="331" y="5" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="Qe6-lh-JBG"/>
+                                                        <constraint firstAttribute="height" constant="44" id="UuZ-P5-XQ8"/>
+                                                    </constraints>
+                                                    <state key="normal" image="btn_options_black"/>
+                                                    <connections>
+                                                        <action selector="optionsButtonTapped:" destination="pfL-Fg-Un6" eventType="touchUpInside" id="hf7-87-fEq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IGi-dt-dRM" firstAttribute="leading" secondItem="sAv-bN-bHG" secondAttribute="leadingMargin" constant="15" id="HMz-cD-HV7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IGi-dt-dRM" secondAttribute="bottom" id="WOU-RQ-XKV"/>
+                                                <constraint firstItem="IGi-dt-dRM" firstAttribute="top" secondItem="sAv-bN-bHG" secondAttribute="top" id="dU4-ra-Rhe"/>
+                                                <constraint firstAttribute="trailing" secondItem="SKK-ra-roY" secondAttribute="trailing" id="e7R-cj-G4r"/>
+                                                <constraint firstItem="SKK-ra-roY" firstAttribute="centerY" secondItem="sAv-bN-bHG" secondAttribute="centerY" id="l4A-X2-JLX"/>
+                                                <constraint firstItem="SKK-ra-roY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IGi-dt-dRM" secondAttribute="trailing" constant="15" id="xym-mn-rT2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="IGi-dt-dRM" id="WMP-As-qz3"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostImageCell" rowHeight="375" id="PAt-Br-hMY" customClass="PostImageCell" customModule="makestagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="82" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAt-Br-hMY" id="Yb1-Yx-sHP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -90,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_options_black" width="16" height="16"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>
 </document>
