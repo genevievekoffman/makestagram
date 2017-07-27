@@ -15,6 +15,12 @@ class HomeViewController: UIViewController  {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let timestampFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        
+        return dateFormatter
+    }() // creates a new dateFormatter- converts a date to string
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,13 +66,22 @@ extension HomeViewController: UITableViewDataSource {
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
-            
+            cell.delegate = self //makes itself the delegate 
+            configureCell(cell, with: post)
+
             return cell
             
         default:
-            fatalError("Error: unexpected indexPath.")
+            fatalError("Error: unexpected indexPath.") // do i need this
         }
     } // returns the corresponding cell, table view will display the same number of cells in our posts array
+    // if the image is liked, we set the isSelected of the UIbutton to true  
+    
+    func configureCell(_ cell: PostActionCell, with post: Post) {
+        cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
+        cell.likeButton.isSelected = post.isLiked
+        cell.likeCountLabel.text = "\(post.likeCount) likes"
+    }
 }
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,5 +99,37 @@ extension HomeViewController: UITableViewDelegate {
             }
         }
     }
+
+extension HomeViewController: PostActionCellDelegate {
+    func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell)
+            else { return } // make sure index path exists for cell
+        
+        likeButton.isUserInteractionEnabled = false //Sets isUserInteractionEnabled property of UIButton to false- so user doesn't send multiple requests
+    
+        let post = posts[indexPath.section] // Reference the correct post corresponding with the PostActionCell the user tapped
+        
+        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in // uses func to like or unlike
+            
+            defer {
+                likeButton.isUserInteractionEnabled = true
+            } //sets isUserInteractionEnabled to true when the closure returns
+            
+            guard success else { return } // handles error
+            
+            
+            post.likeCount += !post.isLiked ? 1 : -1
+            post.isLiked = !post.isLiked // changes the like count & is liked properties (if network request is succesful)
+            
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+                else { return } // gets refernce to current cell
+            
+            DispatchQueue.main.async {
+                self.configureCell(cell, with: post) // update UI of the cell
+            }
+        }
+    }
+}
 
 // groups the tableview into sections - every post is its own section with 3 rows

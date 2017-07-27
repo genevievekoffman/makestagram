@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol PostActionCellDelegate: class {
+    func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell)
+}// allows the delegate to handle when the likeButton is tapped
+
 class PostActionCell: UITableViewCell {
+    weak var delegate: PostActionCellDelegate? // delegate property
     static let height: CGFloat = 46 // displays height of cell 
     
     @IBOutlet weak var likeButton: UIButton!
@@ -19,7 +24,7 @@ class PostActionCell: UITableViewCell {
         super.awakeFromNib()
     }
     @IBAction func likeButtonTapped(_ sender: UIButton) {
-        print("like button tapped")
-    }
+        delegate?.didTapLikeButton(sender, on: self) // notifys the delegate when the likebutton is tapped
+    } //sets HomeViewController as the delegate of PostActionCell
     
 }
