@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ZV-Hh-Ihz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeaderCell" rowHeight="54" id="pfL-Fg-Un6" customClass="PostHeaderCell" customModule="makestagram" customModuleProvider="target">
@@ -81,6 +82,64 @@
                                             <outlet property="postImageView" destination="BJL-Yh-xAq" id="w6n-y4-dAy"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="48" id="ibF-Ee-lcM" customClass="PostActionCell" customModule="makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="457" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ibF-Ee-lcM" id="9ml-6K-RYR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzL-KI-L5o">
+                                                    <rect key="frame" x="2" y="0.0" width="24" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="rzL-KI-L5o" secondAttribute="height" multiplier="24:47" id="apb-NN-uKl"/>
+                                                    </constraints>
+                                                    <state key="normal" image="btn_heart_black_outline"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClicked:" destination="ibF-Ee-lcM" eventType="touchUpInside" id="4hV-AZ-m2h"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  5 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPe-BU-ALe">
+                                                    <rect key="frame" x="26" y="0.0" width="55" height="47.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31 MINUTES AGO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ft-3G-nCa">
+                                                    <rect key="frame" x="267.5" y="0.0" width="92.5" height="47.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-ox-Fap">
+                                                    <rect key="frame" x="15" y="47" width="345" height="0.5"/>
+                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="mlh-y8-wTv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RPe-BU-ALe" firstAttribute="leading" secondItem="rzL-KI-L5o" secondAttribute="trailing" id="49A-Vm-HCB"/>
+                                                <constraint firstAttribute="trailing" secondItem="7ft-3G-nCa" secondAttribute="trailing" constant="15" id="6z3-Jm-wGN"/>
+                                                <constraint firstItem="rzL-KI-L5o" firstAttribute="leading" secondItem="9ml-6K-RYR" secondAttribute="leading" constant="2" id="EUp-xT-KPN"/>
+                                                <constraint firstItem="7ft-3G-nCa" firstAttribute="top" secondItem="9ml-6K-RYR" secondAttribute="top" id="EnF-M0-8Ne"/>
+                                                <constraint firstAttribute="bottom" secondItem="NIn-ox-Fap" secondAttribute="bottom" id="Lyx-DX-Kfj"/>
+                                                <constraint firstItem="rzL-KI-L5o" firstAttribute="top" secondItem="9ml-6K-RYR" secondAttribute="top" id="Pg0-bU-4oe"/>
+                                                <constraint firstAttribute="trailing" secondItem="NIn-ox-Fap" secondAttribute="trailing" constant="15" id="Q6q-zF-paV"/>
+                                                <constraint firstItem="NIn-ox-Fap" firstAttribute="leading" secondItem="9ml-6K-RYR" secondAttribute="leading" constant="15" id="SSm-8Y-niC"/>
+                                                <constraint firstAttribute="bottom" secondItem="7ft-3G-nCa" secondAttribute="bottom" id="fh4-7X-T1O"/>
+                                                <constraint firstItem="RPe-BU-ALe" firstAttribute="top" secondItem="9ml-6K-RYR" secondAttribute="top" id="hOa-dZ-FUn"/>
+                                                <constraint firstItem="NIn-ox-Fap" firstAttribute="top" secondItem="rzL-KI-L5o" secondAttribute="bottom" id="oaE-av-DRJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="RPe-BU-ALe" secondAttribute="bottom" id="zBl-lt-OpH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="rzL-KI-L5o" id="PSc-OK-j3C"/>
+                                            <outlet property="likeCountLabel" destination="RPe-BU-ALe" id="qNc-l5-oDZ"/>
+                                            <outlet property="timeAgoLabel" destination="7ft-3G-nCa" id="5Sb-mj-Ij2"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="mkN-eY-cDB" id="97G-ac-ttA"/>
@@ -90,10 +149,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="top" secondItem="khN-eS-dQ4" secondAttribute="topMargin" id="JaX-3L-1q4"/>
                             <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="leading" secondItem="khN-eS-dQ4" secondAttribute="leading" id="Jek-M7-bWS"/>
-                            <constraint firstItem="5ZV-Hh-Ihz" firstAttribute="top" secondItem="xdE-aF-lie" secondAttribute="bottom" id="WbP-CO-W5n"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5ZV-Hh-Ihz" secondAttribute="bottom" id="dAa-5x-Yvm"/>
                             <constraint firstAttribute="trailing" secondItem="5ZV-Hh-Ihz" secondAttribute="trailing" id="g4W-yI-Kaa"/>
-                            <constraint firstItem="beU-k0-DRg" firstAttribute="top" secondItem="5ZV-Hh-Ihz" secondAttribute="bottom" id="qyX-1p-NKd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HC7-sB-uxc"/>
@@ -129,7 +188,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_options_black" width="16" height="16"/>
+        <image name="btn_heart_black_outline" width="24" height="24"/>
+        <image name="btn_options_black" width="24" height="24"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>
 </document>
