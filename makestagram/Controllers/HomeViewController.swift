@@ -12,6 +12,8 @@ import UIKit
 
 class HomeViewController: UIViewController  {
     var posts = [Post]()  // creates empty array
+   
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -49,7 +51,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section] 
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell

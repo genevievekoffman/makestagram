@@ -97,7 +97,7 @@
                                                     <state key="normal" image="btn_heart_black_outline"/>
                                                     <state key="selected" image="btn_heart_red_solid"/>
                                                     <connections>
-                                                        <action selector="likeButtonClicked:" destination="ibF-Ee-lcM" eventType="touchUpInside" id="4hV-AZ-m2h"/>
+                                                        <action selector="likeButtonTapped:" destination="ibF-Ee-lcM" eventType="touchUpInside" id="395-jN-XOT"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  50 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPe-BU-ALe">
